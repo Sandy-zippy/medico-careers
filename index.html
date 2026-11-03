@@ -64,9 +64,10 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!f.checkValidity()){document.getElementById('e').style.display='block';f.reportValidity();return}
  var d={kind:'hiring',src:(new URLSearchParams(location.search).get('src')||'')};
  new FormData(f).forEach(function(v,k){d[k]=String(v).trim()});
- document.getElementById('b').disabled=true;
- fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(d)})
-  .finally(function(){f.style.display='none';document.getElementById('d').style.display='block';scrollTo(0,0)});
+ var btn=document.getElementById('b');btn.disabled=true;btn.textContent='Sending...';
+ var shown=false,show=function(){if(shown)return;shown=true;f.style.display='none';document.getElementById('d').style.display='block';scrollTo(0,0)};
+ fetch(ENDPOINT,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify(d)}).finally(show);
+ setTimeout(show,2500); // ponytail: request keeps going with keepalive; no need to make people wait on Apps Script
 });
 </script>
 </body></html>
