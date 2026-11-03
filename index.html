@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Careers at Medico</title><meta name="description" content="Medico Construction & Design is hiring in BC and Alberta. Apply in about a minute.">
+<meta name="robots" content="noindex"><link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1475bc;--ink:#16324f;--line:#d6e6f4;--bg:#f5f9fd;--white:#fbfdff}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Open Sans',sans-serif;color:var(--ink);background:var(--bg)}
+header{color:var(--white);background:radial-gradient(120% 80% at 90% 0%,#2a8ad6 0,transparent 55%),linear-gradient(170deg,#1475bc,#0e5ea3 50%,#093a72);padding:24px 20px 96px}
+.in{max-width:640px;margin:0 auto}
+header img{height:40px}
+h1{font-family:Montserrat;font-weight:300;text-transform:uppercase;font-size:clamp(44px,12vw,72px);line-height:1;margin-top:28px}
+h1 b{font-weight:700}
+header p{font-family:Montserrat;text-transform:uppercase;letter-spacing:.06em;font-size:15px;margin-top:14px;line-height:1.5}
+.perks{margin-top:10px;font-weight:600;opacity:.9}
+main{padding:0 16px 48px}
+form,.done{max-width:640px;margin:-72px auto 0;background:var(--white);border-radius:22px;padding:28px 22px;box-shadow:0 20px 40px rgba(3,20,45,.15)}
+h2{font-family:Montserrat;font-style:italic;font-weight:800;color:var(--blue);text-transform:uppercase;font-size:20px}
+.lead{font-size:15px;color:#4a5b6d;margin:6px 0 18px}
+label{display:block;font-weight:600;font-size:15px;margin:16px 0 6px}
+input,select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+@media(max-width:480px){.row{grid-template-columns:1fr}}
+.hp{position:absolute;left:-9999px}
+button{margin-top:24px;width:100%;border:0;border-radius:999px;background:var(--blue);color:#fff;font-family:Montserrat;font-style:italic;font-weight:800;text-transform:uppercase;font-size:18px;letter-spacing:.04em;padding:17px;cursor:pointer}
+button:disabled{opacity:.6}
+.small{font-size:13px;color:#5d6d7e;margin-top:14px;line-height:1.5}
+.done{display:none;text-align:center}
+.done p{margin-top:10px;line-height:1.6}
+.err{color:#b3261e;font-size:14px;margin-top:10px;display:none}
+a{color:var(--blue)}
+</style></head><body>
+<header><div class="in"><img src="logo.svg" alt="Medico Construction &amp; Design">
+<h1>We’re <b>hiring</b></h1>
+<p>Join our growing healthcare construction team in BC and Alberta</p>
+<p class="perks">Full benefits · Competitive pay · Room to grow</p></div></header>
+<main>
+<form id="f" novalidate>
+ <h2>Apply in about a minute</h2>
+ <p class="lead">Medico builds medical, dental, optometry, pharmacy and veterinary clinics. Tell us a little about you.</p>
+ <label for="role">Which role?</label>
+ <select id="role" name="role" required><option value="">Choose a role</option>
+  <optgroup label="British Columbia"><option>Office Manager (BC)</option><option>Project Manager (BC)</option><option>Site Superintendent (BC)</option><option>Project Coordinator (BC)</option><option>Business Development Manager (BC)</option><option>Executive Assistant (BC)</option></optgroup>
+  <optgroup label="Alberta"><option>Office Manager (Alberta)</option><option>Business Development Manager (Alberta)</option></optgroup></select>
+ <label for="full_name">Full name</label><input id="full_name" name="full_name" autocomplete="name" required>
+ <div class="row"><div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+ <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div></div>
+ <label for="city">City you live in</label><input id="city" name="city" autocomplete="address-level2" required>
+ <div class="row"><div><label for="experience">Years in construction</label><select id="experience" name="experience" required><option value="">Choose</option><option>Less than 2 years</option><option>2-5 years</option><option>5-10 years</option><option>10+ years</option></select></div>
+ <div><label for="healthcare">Healthcare or commercial builds?</label><select id="healthcare" name="healthcare" required><option value="">Choose</option><option>Yes, healthcare</option><option>Yes, commercial</option><option>Not yet</option></select></div></div>
+ <label for="start">When could you start?</label><select id="start" name="start" required><option value="">Choose</option><option>Right away</option><option>Within 2 weeks</option><option>Within a month</option><option>More than a month</option></select>
+ <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+ <button id="b" type="submit">Send my application</button>
+ <p class="err" id="e">Please fill in every field.</p>
+ <p class="small">Have a resume? Email it to <a href="mailto:info@medicoconstruction.com">info@medicoconstruction.com</a> with the role in the subject. <a href="privacy.html">Privacy</a></p>
+</form>
+<div class="done" id="d"><h2>Thanks, we've got it</h2><p>We review every application. If you have a resume, email it to <a href="mailto:info@medicoconstruction.com">info@medicoconstruction.com</a> with the role in the subject.</p></div>
+</main>
+<script>
+var ENDPOINT='https://script.google.com/macros/s/AKfycbx1g_WrKHgaOzbo_6C-hdKMbKo81CJuiCEla1V_m6XKL_YZjwhYQIjCXXA0zledpht5Jw/exec';
+var f=document.getElementById('f');
+f.addEventListener('submit',function(ev){ev.preventDefault();
+ if(!f.checkValidity()){document.getElementById('e').style.display='block';f.reportValidity();return}
+ var d={kind:'hiring',src:(new URLSearchParams(location.search).get('src')||'')};
+ new FormData(f).forEach(function(v,k){d[k]=String(v).trim()});
+ document.getElementById('b').disabled=true;
+ fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(d)})
+  .finally(function(){f.style.display='none';document.getElementById('d').style.display='block';scrollTo(0,0)});
+});
+</script>
+</body></html>
