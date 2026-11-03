@@ -19,6 +19,7 @@ h2{font-family:Montserrat;font-style:italic;font-weight:800;color:var(--blue);te
 .lead{font-size:15px;color:#4a5b6d;margin:6px 0 18px}
 label{display:block;font-weight:600;font-size:15px;margin:16px 0 6px}
 input,select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+select{-webkit-appearance:none;appearance:none;padding-right:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231475bc' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center}
 input:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
 @media(max-width:480px){.row{grid-template-columns:1fr}}
@@ -55,7 +56,7 @@ a{color:var(--blue)}
  <p class="err" id="e">Please fill in every field.</p>
  <p class="small">Have a resume? Email it to <a href="mailto:info@medicoconstruction.com">info@medicoconstruction.com</a> with the role in the subject. <a href="privacy.html">Privacy</a></p>
 </form>
-<div class="done" id="d"><h2>Thanks, we've got it</h2><p>We review every application. If you have a resume, email it to <a href="mailto:info@medicoconstruction.com">info@medicoconstruction.com</a> with the role in the subject.</p></div>
+<div class="done" id="d"><h2>Thanks, we've got it</h2><p>We'll read your answers and get in touch if it's a fit. No resume needed. If you have one handy, email it to <a href="mailto:info@medicoconstruction.com">info@medicoconstruction.com</a> with the role in the subject.</p></div>
 </main>
 <script>
 var ENDPOINT='https://script.google.com/macros/s/AKfycbx1g_WrKHgaOzbo_6C-hdKMbKo81CJuiCEla1V_m6XKL_YZjwhYQIjCXXA0zledpht5Jw/exec';
